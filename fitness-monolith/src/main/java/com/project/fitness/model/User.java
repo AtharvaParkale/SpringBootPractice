@@ -19,6 +19,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
     private String email;
+    private String password;
     private String firstName;
     private String lastName;
     private LocalDateTime createdAt;

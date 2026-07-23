@@ -1,6 +1,8 @@
 package com.project.fitness.controller;
 
 import ch.qos.logback.core.Context;
+import com.project.fitness.dto.RegisterRequest;
+import com.project.fitness.dto.UserResponse;
 import com.project.fitness.model.User;
 import com.project.fitness.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -14,17 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/auth") // Same is appended everywhere
 @RequiredArgsConstructor
 public class AuthController {
-
-
     private final UserService userService;
 
-    //You dont need to write this , just annotate with lombok, it will take care
-    //    public AuthController(UserService userService) {
-    //        this.userService = userService;
-    //    }
-
     @PostMapping("/register")
-    public User register(@RequestBody User user) {
-        return userService.register(user);
+    public UserResponse register(@RequestBody RegisterRequest registerRequest) {
+        return userService.register(registerRequest);
     }
 }

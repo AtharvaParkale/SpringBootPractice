@@ -11,4 +11,14 @@ public class HelloController {
     private String sayHello() {
         return "Hello";
     }
+
+    @GetMapping("/admin/hello")
+    private String sayAdminHello() {
+        return "Hello Admin!";
+    }
+
+    @GetMapping("/user/hello")
+    private String sayUserHello() {
+        return "Hello User!";
+    }
 }

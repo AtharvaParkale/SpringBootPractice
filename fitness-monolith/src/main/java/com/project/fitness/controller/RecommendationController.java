@@ -1,6 +1,7 @@
 package com.project.fitness.controller;
 
 import com.project.fitness.dto.RecommendationRequest;
+import com.project.fitness.model.Activity;
 import com.project.fitness.model.Recommendation;
 import com.project.fitness.service.RecommendationService;
 import lombok.RequiredArgsConstructor;
@@ -26,5 +27,12 @@ public class RecommendationController {
     public ResponseEntity<List<Recommendation>> getUserRecommendation(@PathVariable String userId) {
         List<Recommendation> recommendationList = recommendationService.getUserRecommendation(userId);
         return ResponseEntity.ok(recommendationList);
+    }
+
+
+    @GetMapping("/activity/{activityId}")
+    public ResponseEntity<List<Recommendation>> getActivityRecommendation(@PathVariable String activityId) {
+        List<Recommendation> activityList = recommendationService.getActivityRecommendation(activityId);
+        return ResponseEntity.ok(activityList);
     }
 }

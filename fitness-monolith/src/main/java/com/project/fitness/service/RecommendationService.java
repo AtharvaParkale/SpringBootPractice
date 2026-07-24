@@ -10,6 +10,8 @@ import com.project.fitness.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class RecommendationService {
@@ -25,5 +27,9 @@ public class RecommendationService {
         Recommendation recommendation = Recommendation.builder().user(user).activity(activity).improvements(request.getImprovements()).suggestions(request.getSuggestions()).safety(request.getSafety()).build();
 
         return recommendationRepository.save(recommendation);
+    }
+
+    public List<Recommendation> getUserRecommendation(String userId) {
+        return recommendationRepository.findByUserId(userId);
     }
 }

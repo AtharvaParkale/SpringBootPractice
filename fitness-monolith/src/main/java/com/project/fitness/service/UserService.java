@@ -26,7 +26,10 @@ public class UserService {
 
         UserRole userRole = request.getRole() != null ? request.getRole() : UserRole.USER;
 
-        User user = User.builder().email(request.getEmail()).lastName(request.getLastName()).firstName(request.getFirstName()).password(passwordEncoder.encode(request.getPassword())).role(userRole).build();
+        User user = User.builder().email(request.getEmail())
+                .lastName(request.getLastName())
+                .firstName(request.getFirstName())
+                .password(passwordEncoder.encode(request.getPassword())).role(userRole).build();
 
         User savedUser = userRepository.save(user);
 
@@ -37,8 +40,7 @@ public class UserService {
         UserResponse userResponse = new UserResponse();
 
         userResponse.setId(savedUser.getId());
-        userResponse.setEmail(savedUser.getId());
-        userResponse.setPassword(savedUser.getEmail());
+        userResponse.setEmail(savedUser.getEmail());
         userResponse.setPassword(savedUser.getPassword());
         userResponse.setFirstName(savedUser.getFirstName());
         userResponse.setLastName(savedUser.getLastName());

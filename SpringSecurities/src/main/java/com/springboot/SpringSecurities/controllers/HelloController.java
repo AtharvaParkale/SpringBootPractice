@@ -61,7 +61,7 @@ public class HelloController {
 
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
 
-        String jwtToken = jwtUtils.generateTokenFromUsername(userDetails.getUsername());
+        String jwtToken = jwtUtils.generateTokenFromUsername(userDetails);
 
         return jwtToken;
     }

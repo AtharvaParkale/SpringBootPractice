@@ -3,8 +3,10 @@ package com.project.fitness.service;
 import com.project.fitness.dto.RegisterRequest;
 import com.project.fitness.dto.UserResponse;
 import com.project.fitness.model.User;
+import com.project.fitness.model.UserRole;
 import com.project.fitness.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
@@ -16,22 +18,26 @@ import java.util.List;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
     public UserResponse register(RegisterRequest request) {
+
+        UserRole userRole = request.getRole() != null ? request.getRole() : UserRole.USER;
+
         User user = User.builder()
                 .email(request.getEmail())
                 .lastName(request.getLastName())
                 .firstName(request.getFirstName())
-                .password(request.getPassword())
+                .password(passwordEncoder.encode(request.getPassword()))
+                .role(userRole)
                 .build();
-//        User user = new User(null, request.getEmail(), request.getPassword(), request.getFirstName(), request.getLastName(), Instant.parse("2026-07-23T12:44:39.214Z").atZone(ZoneOffset.UTC).toLocalDateTime(), Instant.parse("2026-07-23T12:44:39.214Z").atZone(ZoneOffset.UTC).toLocalDateTime(), List.of(), List.of());
 
         User savedUser = userRepository.save(user);
 
         return mappedTo(savedUser);
     }
 
-    private UserResponse mappedTo(User savedUser) {
+    public UserResponse mappedTo(User savedUser) {
         UserResponse userResponse = new UserResponse();
 
         userResponse.setId(savedUser.getId());

@@ -9,6 +9,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
@@ -39,9 +41,11 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
-        UserDetails user1 = User.withUsername("user3").password("{noop}password1").roles("USER").build();
-        UserDetails user2 = User.withUsername("user4").password("{noop}password2").roles("USER").build();
-        UserDetails admin = User.withUsername("admin1").password("{noop}admin").roles("ADMIN").build();
+        UserDetails user1 = User.withUsername("user5")
+                .password(passwordEncoder().encode("password1"))
+                .roles("USER").build();
+        UserDetails user2 = User.withUsername("user6").password(passwordEncoder().encode("password1")).roles("USER").build();
+        UserDetails admin = User.withUsername("admin2").password(passwordEncoder().encode("password1 ")).roles("ADMIN").build();
 
         JdbcUserDetailsManager userDetailsManager = new JdbcUserDetailsManager(dataSource);
 
@@ -50,5 +54,10 @@ public class SecurityConfig {
         userDetailsManager.createUser(admin);
 
         return userDetailsManager;
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
     }
 }

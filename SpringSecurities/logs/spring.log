@@ -170,3 +170,305 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'u
 	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:670) ~[spring-jdbc-7.0.8.jar:7.0.8]
 	... 90 common frames omitted
 
+2026-07-25T13:13:41.438+05:30  INFO 5315 --- [SpringSecurities] [main] c.s.S.SpringSecuritiesApplication        : Starting SpringSecuritiesApplication using Java 24.0.1 with PID 5315 (/Users/atharvaparkale/Personal/Dev/SpringBoot/SpringSecurities/target/classes started by atharvaparkale in /Users/atharvaparkale/Personal/Dev/SpringBoot/SpringSecurities)
+2026-07-25T13:13:41.440+05:30 DEBUG 5315 --- [SpringSecurities] [main] c.s.S.SpringSecuritiesApplication        : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-25T13:13:41.440+05:30  INFO 5315 --- [SpringSecurities] [main] c.s.S.SpringSecuritiesApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-07-25T13:13:41.676+05:30  INFO 5315 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-25T13:13:41.677+05:30  INFO 5315 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-07-25T13:13:41.689+05:30  INFO 5315 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JDBC repository interfaces.
+2026-07-25T13:13:41.694+05:30  INFO 5315 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-25T13:13:41.694+05:30  INFO 5315 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-25T13:13:41.697+05:30  INFO 5315 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2026-07-25T13:13:41.836+05:30  INFO 5315 --- [SpringSecurities] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-25T13:13:41.841+05:30  INFO 5315 --- [SpringSecurities] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-25T13:13:41.841+05:30  INFO 5315 --- [SpringSecurities] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-25T13:13:41.852+05:30  INFO 5315 --- [SpringSecurities] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 392 ms
+2026-07-25T13:13:41.911+05:30  INFO 5315 --- [SpringSecurities] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-25T13:13:41.932+05:30  INFO 5315 --- [SpringSecurities] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-25T13:13:42.063+05:30  INFO 5315 --- [SpringSecurities] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-25T13:13:42.074+05:30  INFO 5315 --- [SpringSecurities] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-25T13:13:42.205+05:30  INFO 5315 --- [SpringSecurities] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@69d58731
+2026-07-25T13:13:42.206+05:30  INFO 5315 --- [SpringSecurities] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-25T13:13:42.226+05:30  WARN 5315 --- [SpringSecurities] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-25T13:13:42.232+05:30  INFO 5315 --- [SpringSecurities] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/security_app]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 9.7.1
+	Default catalog/schema: security_app/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-25T13:13:42.398+05:30  INFO 5315 --- [SpringSecurities] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-25T13:13:42.422+05:30  INFO 5315 --- [SpringSecurities] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-25T13:13:42.658+05:30  INFO 5315 --- [SpringSecurities] [main] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-07-25T13:13:42.660+05:30  INFO 5315 --- [SpringSecurities] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-07-25T13:13:42.673+05:30  WARN 5315 --- [SpringSecurities] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-25T13:13:42.733+05:30 DEBUG 5315 --- [SpringSecurities] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-07-25T13:13:42.766+05:30 DEBUG 5315 --- [SpringSecurities] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2026-07-25T13:13:42.774+05:30 DEBUG 5315 --- [SpringSecurities] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-07-25T13:13:42.782+05:30 DEBUG 5315 --- [SpringSecurities] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-07-25T13:13:42.794+05:30 DEBUG 5315 --- [SpringSecurities] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-07-25T13:13:42.877+05:30  INFO 5315 --- [SpringSecurities] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-25T13:13:42.879+05:30  INFO 5315 --- [SpringSecurities] [main] c.s.S.SpringSecuritiesApplication        : Started SpringSecuritiesApplication in 1.604 seconds (process running for 1.854)
+2026-07-25T13:17:46.833+05:30  INFO 5315 --- [SpringSecurities] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-25T13:17:46.838+05:30  INFO 5315 --- [SpringSecurities] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-25T13:17:46.841+05:30  INFO 5315 --- [SpringSecurities] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-25T13:17:46.842+05:30  INFO 5315 --- [SpringSecurities] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-25T13:17:46.844+05:30  INFO 5315 --- [SpringSecurities] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-25T13:17:48.278+05:30  INFO 5405 --- [SpringSecurities] [main] c.s.S.SpringSecuritiesApplication        : Starting SpringSecuritiesApplication using Java 24.0.1 with PID 5405 (/Users/atharvaparkale/Personal/Dev/SpringBoot/SpringSecurities/target/classes started by atharvaparkale in /Users/atharvaparkale/Personal/Dev/SpringBoot/SpringSecurities)
+2026-07-25T13:17:48.279+05:30 DEBUG 5405 --- [SpringSecurities] [main] c.s.S.SpringSecuritiesApplication        : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-25T13:17:48.279+05:30  INFO 5405 --- [SpringSecurities] [main] c.s.S.SpringSecuritiesApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-07-25T13:17:48.495+05:30  INFO 5405 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-25T13:17:48.496+05:30  INFO 5405 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-07-25T13:17:48.502+05:30  INFO 5405 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2026-07-25T13:17:48.506+05:30  INFO 5405 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-25T13:17:48.506+05:30  INFO 5405 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-25T13:17:48.509+05:30  INFO 5405 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2026-07-25T13:17:48.649+05:30  INFO 5405 --- [SpringSecurities] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-25T13:17:48.653+05:30  INFO 5405 --- [SpringSecurities] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-25T13:17:48.654+05:30  INFO 5405 --- [SpringSecurities] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-25T13:17:48.666+05:30  INFO 5405 --- [SpringSecurities] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 369 ms
+2026-07-25T13:17:48.723+05:30  INFO 5405 --- [SpringSecurities] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-25T13:17:48.742+05:30  INFO 5405 --- [SpringSecurities] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-25T13:17:48.870+05:30  INFO 5405 --- [SpringSecurities] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-25T13:17:48.880+05:30  INFO 5405 --- [SpringSecurities] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-25T13:17:49.045+05:30  INFO 5405 --- [SpringSecurities] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@69d58731
+2026-07-25T13:17:49.045+05:30  INFO 5405 --- [SpringSecurities] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-25T13:17:49.064+05:30  WARN 5405 --- [SpringSecurities] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-25T13:17:49.070+05:30  INFO 5405 --- [SpringSecurities] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/security_app]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 9.7.1
+	Default catalog/schema: security_app/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-25T13:17:49.235+05:30  INFO 5405 --- [SpringSecurities] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-25T13:17:49.256+05:30  INFO 5405 --- [SpringSecurities] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-25T13:17:49.486+05:30  INFO 5405 --- [SpringSecurities] [main] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-07-25T13:17:49.488+05:30  INFO 5405 --- [SpringSecurities] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-07-25T13:17:49.501+05:30  WARN 5405 --- [SpringSecurities] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-25T13:17:49.559+05:30 DEBUG 5405 --- [SpringSecurities] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-07-25T13:17:49.588+05:30 DEBUG 5405 --- [SpringSecurities] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2026-07-25T13:17:49.596+05:30 DEBUG 5405 --- [SpringSecurities] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-07-25T13:17:49.604+05:30 DEBUG 5405 --- [SpringSecurities] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-07-25T13:17:49.616+05:30 DEBUG 5405 --- [SpringSecurities] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-07-25T13:17:49.689+05:30  INFO 5405 --- [SpringSecurities] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-25T13:17:49.691+05:30  INFO 5405 --- [SpringSecurities] [main] c.s.S.SpringSecuritiesApplication        : Started SpringSecuritiesApplication in 1.544 seconds (process running for 1.791)
+2026-07-25T13:17:52.152+05:30  INFO 5405 --- [SpringSecurities] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-25T13:17:52.152+05:30  INFO 5405 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-25T13:17:52.152+05:30 DEBUG 5405 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-07-25T13:17:52.152+05:30 DEBUG 5405 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-07-25T13:17:52.153+05:30 DEBUG 5405 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@481c1e92
+2026-07-25T13:17:52.153+05:30 DEBUG 5405 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@7402bfe7
+2026-07-25T13:17:52.154+05:30 DEBUG 5405 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-07-25T13:17:52.154+05:30  INFO 5405 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-07-25T13:17:52.158+05:30 DEBUG 5405 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /signin
+2026-07-25T13:17:52.169+05:30 DEBUG 5405 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.security.web.csrf.CsrfFilter         : Invalid CSRF token found for http://localhost:8080/signin
+2026-07-25T13:17:52.169+05:30 DEBUG 5405 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2026-07-25T13:17:52.171+05:30 DEBUG 5405 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-07-25T13:17:52.172+05:30 DEBUG 5405 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-07-25T13:17:52.174+05:30 DEBUG 5405 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?continue to session
+2026-07-25T13:17:52.175+05:30 DEBUG 5405 --- [SpringSecurities] [http-nio-8080-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2026-07-25T13:17:52.175+05:30 DEBUG 5405 --- [SpringSecurities] [http-nio-8080-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@293a7b35
+2026-07-25T13:22:36.604+05:30  INFO 5405 --- [SpringSecurities] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-25T13:22:36.609+05:30  INFO 5405 --- [SpringSecurities] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-25T13:22:36.617+05:30  INFO 5405 --- [SpringSecurities] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-25T13:22:36.618+05:30  INFO 5405 --- [SpringSecurities] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-25T13:22:36.621+05:30  INFO 5405 --- [SpringSecurities] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-25T13:22:38.166+05:30  INFO 5515 --- [SpringSecurities] [main] c.s.S.SpringSecuritiesApplication        : Starting SpringSecuritiesApplication using Java 24.0.1 with PID 5515 (/Users/atharvaparkale/Personal/Dev/SpringBoot/SpringSecurities/target/classes started by atharvaparkale in /Users/atharvaparkale/Personal/Dev/SpringBoot/SpringSecurities)
+2026-07-25T13:22:38.167+05:30 DEBUG 5515 --- [SpringSecurities] [main] c.s.S.SpringSecuritiesApplication        : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-25T13:22:38.167+05:30  INFO 5515 --- [SpringSecurities] [main] c.s.S.SpringSecuritiesApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-07-25T13:22:38.387+05:30  INFO 5515 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-25T13:22:38.388+05:30  INFO 5515 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-07-25T13:22:38.394+05:30  INFO 5515 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2026-07-25T13:22:38.399+05:30  INFO 5515 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-25T13:22:38.399+05:30  INFO 5515 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-25T13:22:38.402+05:30  INFO 5515 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2026-07-25T13:22:38.535+05:30  INFO 5515 --- [SpringSecurities] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-25T13:22:38.540+05:30  INFO 5515 --- [SpringSecurities] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-25T13:22:38.540+05:30  INFO 5515 --- [SpringSecurities] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-25T13:22:38.550+05:30  INFO 5515 --- [SpringSecurities] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 365 ms
+2026-07-25T13:22:38.605+05:30  INFO 5515 --- [SpringSecurities] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-25T13:22:38.623+05:30  INFO 5515 --- [SpringSecurities] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-25T13:22:38.753+05:30  INFO 5515 --- [SpringSecurities] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-25T13:22:38.763+05:30  INFO 5515 --- [SpringSecurities] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-25T13:22:38.884+05:30  INFO 5515 --- [SpringSecurities] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77476fcf
+2026-07-25T13:22:38.885+05:30  INFO 5515 --- [SpringSecurities] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-25T13:22:38.908+05:30  WARN 5515 --- [SpringSecurities] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-25T13:22:38.913+05:30  INFO 5515 --- [SpringSecurities] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/security_app]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 9.7.1
+	Default catalog/schema: security_app/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-25T13:22:39.070+05:30  INFO 5515 --- [SpringSecurities] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-25T13:22:39.091+05:30  INFO 5515 --- [SpringSecurities] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-25T13:22:39.318+05:30  INFO 5515 --- [SpringSecurities] [main] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-07-25T13:22:39.321+05:30  INFO 5515 --- [SpringSecurities] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-07-25T13:22:39.334+05:30  WARN 5515 --- [SpringSecurities] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-25T13:22:39.391+05:30 DEBUG 5515 --- [SpringSecurities] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-07-25T13:22:39.420+05:30 DEBUG 5515 --- [SpringSecurities] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2026-07-25T13:22:39.428+05:30 DEBUG 5515 --- [SpringSecurities] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-07-25T13:22:39.436+05:30 DEBUG 5515 --- [SpringSecurities] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-07-25T13:22:39.448+05:30 DEBUG 5515 --- [SpringSecurities] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-07-25T13:22:39.521+05:30  INFO 5515 --- [SpringSecurities] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-25T13:22:39.524+05:30  INFO 5515 --- [SpringSecurities] [main] c.s.S.SpringSecuritiesApplication        : Started SpringSecuritiesApplication in 1.488 seconds (process running for 1.705)
+2026-07-25T13:22:51.704+05:30  INFO 5515 --- [SpringSecurities] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-25T13:22:51.705+05:30  INFO 5515 --- [SpringSecurities] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-25T13:22:51.705+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-07-25T13:22:51.705+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-07-25T13:22:51.706+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@50d91a0f
+2026-07-25T13:22:51.706+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@7c013560
+2026-07-25T13:22:51.706+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-07-25T13:22:51.706+05:30  INFO 5515 --- [SpringSecurities] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-25T13:22:51.712+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /signin
+2026-07-25T13:22:51.715+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /signin
+2026-07-25T13:22:51.716+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/signin", parameters={}
+2026-07-25T13:22:51.720+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.springboot.SpringSecurities.controllers.HelloController#login(LoginRequest)
+2026-07-25T13:22:51.770+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.springboot.SpringSecurities.LoginRequest@13e25018]
+2026-07-25T13:22:51.837+05:30  WARN 5515 --- [SpringSecurities] [http-nio-8080-exec-1] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2026-07-25T13:22:51.837+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Failed to authenticate since password does not match stored value
+2026-07-25T13:22:51.839+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-1] o.s.s.authentication.ProviderManager     : Authentication failed with provider DaoAuthenticationProvider since Bad credentials
+2026-07-25T13:22:51.842+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2026-07-25T13:22:51.843+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing ["Could not authenticate"]
+2026-07-25T13:22:51.845+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-07-25T13:22:51.845+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-07-25T13:24:03.051+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /signin
+2026-07-25T13:24:03.053+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /signin
+2026-07-25T13:24:03.054+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/signin", parameters={}
+2026-07-25T13:24:03.054+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.springboot.SpringSecurities.controllers.HelloController#login(LoginRequest)
+2026-07-25T13:24:03.059+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.springboot.SpringSecurities.LoginRequest@57792089]
+2026-07-25T13:24:03.064+05:30  WARN 5515 --- [SpringSecurities] [http-nio-8080-exec-5] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2026-07-25T13:24:03.064+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Failed to authenticate since password does not match stored value
+2026-07-25T13:24:03.064+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-5] o.s.s.authentication.ProviderManager     : Authentication failed with provider DaoAuthenticationProvider since Bad credentials
+2026-07-25T13:24:03.067+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2026-07-25T13:24:03.067+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing ["Could not authenticate"]
+2026-07-25T13:24:03.068+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-07-25T13:24:03.069+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-07-25T13:27:03.076+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /signin
+2026-07-25T13:27:03.079+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /signin
+2026-07-25T13:27:03.079+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/signin", parameters={}
+2026-07-25T13:27:03.080+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.springboot.SpringSecurities.controllers.HelloController#login(LoginRequest)
+2026-07-25T13:27:03.084+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.springboot.SpringSecurities.LoginRequest@27a79a34]
+2026-07-25T13:27:03.090+05:30  WARN 5515 --- [SpringSecurities] [http-nio-8080-exec-7] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2026-07-25T13:27:03.091+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Failed to authenticate since password does not match stored value
+2026-07-25T13:27:03.091+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-7] o.s.s.authentication.ProviderManager     : Authentication failed with provider DaoAuthenticationProvider since Bad credentials
+2026-07-25T13:27:03.093+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2026-07-25T13:27:03.094+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing ["Could not authenticate"]
+2026-07-25T13:27:03.095+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-07-25T13:27:03.095+05:30 DEBUG 5515 --- [SpringSecurities] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-07-25T13:28:28.974+05:30  WARN 5515 --- [SpringSecurities] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s944ms).
+2026-07-25T14:09:29.432+05:30  WARN 5515 --- [SpringSecurities] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m51s772ms).
+2026-07-25T14:36:39.504+05:30  WARN 5515 --- [SpringSecurities] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m10s72ms).
+2026-07-25T15:28:45.652+05:30  WARN 5515 --- [SpringSecurities] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52m6s148ms).
+2026-07-25T16:47:19.946+05:30  WARN 5515 --- [SpringSecurities] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h18m34s294ms).
+2026-07-25T17:27:51.622+05:30  WARN 5515 --- [SpringSecurities] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=40m31s676ms).
+2026-07-25T18:21:34.270+05:30  WARN 5515 --- [SpringSecurities] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53m42s648ms).
+2026-07-25T19:32:43.092+05:30  WARN 5515 --- [SpringSecurities] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h11m8s822ms).
+2026-07-25T20:33:46.256+05:30  WARN 5515 --- [SpringSecurities] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m3s164ms).
+2026-07-25T21:34:48.966+05:30  WARN 5515 --- [SpringSecurities] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m2s710ms).
+2026-07-25T21:51:24.964+05:30  WARN 5515 --- [SpringSecurities] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m35s997ms).
+2026-07-25T22:06:10.631+05:30  WARN 5515 --- [SpringSecurities] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m7s950ms).
+2026-07-25T22:18:41.359+05:30  WARN 5515 --- [SpringSecurities] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m30s728ms).
+2026-07-25T22:22:02.500+05:30  INFO 5515 --- [SpringSecurities] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-25T22:22:02.507+05:30  INFO 5515 --- [SpringSecurities] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-07-25T22:22:02.512+05:30  INFO 5515 --- [SpringSecurities] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-25T22:22:02.514+05:30  INFO 5515 --- [SpringSecurities] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-25T22:22:02.515+05:30  INFO 5515 --- [SpringSecurities] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-25T22:22:05.287+05:30  INFO 6461 --- [SpringSecurities] [main] c.s.S.SpringSecuritiesApplication        : Starting SpringSecuritiesApplication using Java 24.0.1 with PID 6461 (/Users/atharvaparkale/Personal/Dev/SpringBoot/SpringSecurities/target/classes started by atharvaparkale in /Users/atharvaparkale/Personal/Dev/SpringBoot/SpringSecurities)
+2026-07-25T22:22:05.288+05:30 DEBUG 6461 --- [SpringSecurities] [main] c.s.S.SpringSecuritiesApplication        : Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-25T22:22:05.288+05:30  INFO 6461 --- [SpringSecurities] [main] c.s.S.SpringSecuritiesApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-07-25T22:22:05.532+05:30  INFO 6461 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-25T22:22:05.532+05:30  INFO 6461 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2026-07-25T22:22:05.538+05:30  INFO 6461 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JDBC repository interfaces.
+2026-07-25T22:22:05.543+05:30  INFO 6461 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-07-25T22:22:05.544+05:30  INFO 6461 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-25T22:22:05.546+05:30  INFO 6461 --- [SpringSecurities] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2026-07-25T22:22:05.684+05:30  INFO 6461 --- [SpringSecurities] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-07-25T22:22:05.690+05:30  INFO 6461 --- [SpringSecurities] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-25T22:22:05.691+05:30  INFO 6461 --- [SpringSecurities] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-25T22:22:05.705+05:30  INFO 6461 --- [SpringSecurities] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 402 ms
+2026-07-25T22:22:05.772+05:30  INFO 6461 --- [SpringSecurities] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-25T22:22:05.796+05:30  INFO 6461 --- [SpringSecurities] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-25T22:22:05.932+05:30  INFO 6461 --- [SpringSecurities] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-25T22:22:05.944+05:30  INFO 6461 --- [SpringSecurities] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-25T22:22:06.089+05:30  INFO 6461 --- [SpringSecurities] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e895e3e
+2026-07-25T22:22:06.089+05:30  INFO 6461 --- [SpringSecurities] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-25T22:22:06.113+05:30  WARN 6461 --- [SpringSecurities] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-25T22:22:06.118+05:30  INFO 6461 --- [SpringSecurities] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/security_app]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 9.7.1
+	Default catalog/schema: security_app/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-25T22:22:06.285+05:30  INFO 6461 --- [SpringSecurities] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-25T22:22:06.306+05:30  INFO 6461 --- [SpringSecurities] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-25T22:22:06.544+05:30  INFO 6461 --- [SpringSecurities] [main] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2026-07-25T22:22:06.547+05:30  INFO 6461 --- [SpringSecurities] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-07-25T22:22:06.559+05:30  WARN 6461 --- [SpringSecurities] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-25T22:22:06.615+05:30 DEBUG 6461 --- [SpringSecurities] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-07-25T22:22:06.644+05:30 DEBUG 6461 --- [SpringSecurities] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2026-07-25T22:22:06.652+05:30 DEBUG 6461 --- [SpringSecurities] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-07-25T22:22:06.659+05:30 DEBUG 6461 --- [SpringSecurities] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-07-25T22:22:06.670+05:30 DEBUG 6461 --- [SpringSecurities] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-07-25T22:22:06.743+05:30  INFO 6461 --- [SpringSecurities] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-07-25T22:22:06.745+05:30  INFO 6461 --- [SpringSecurities] [main] c.s.S.SpringSecuritiesApplication        : Started SpringSecuritiesApplication in 1.613 seconds (process running for 1.911)
+2026-07-25T22:22:26.786+05:30  INFO 6461 --- [SpringSecurities] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-25T22:22:26.786+05:30  INFO 6461 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-25T22:22:26.786+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-07-25T22:22:26.786+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-07-25T22:22:26.787+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3dbb7bb
+2026-07-25T22:22:26.787+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1d4c6e32
+2026-07-25T22:22:26.788+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-07-25T22:22:26.788+05:30  INFO 6461 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-07-25T22:22:26.792+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /signin
+2026-07-25T22:22:26.797+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /signin
+2026-07-25T22:22:26.798+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/signin", parameters={}
+2026-07-25T22:22:26.802+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.springboot.SpringSecurities.controllers.HelloController#login(LoginRequest)
+2026-07-25T22:22:26.850+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.springboot.SpringSecurities.LoginRequest@14c21fcc]
+2026-07-25T22:22:26.977+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-07-25T22:22:26.978+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-07-25T22:22:27.024+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2026-07-25T22:22:27.024+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing ["eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTc4NDk5ODM0NiwiZXhwIjoxNzg1MTcxMTQ2fQ.k6BdAFpK8kpL (truncated)..."]
+2026-07-25T22:22:27.027+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-07-25T22:22:34.711+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /signin
+2026-07-25T22:22:34.712+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /signin
+2026-07-25T22:22:34.712+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/signin", parameters={}
+2026-07-25T22:22:34.713+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.springboot.SpringSecurities.controllers.HelloController#login(LoginRequest)
+2026-07-25T22:22:34.715+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.springboot.SpringSecurities.LoginRequest@2aa81bde]
+2026-07-25T22:22:34.815+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-07-25T22:22:34.815+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-07-25T22:22:34.816+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2026-07-25T22:22:34.816+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing ["eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTc4NDk5ODM1NCwiZXhwIjoxNzg1MTcxMTU0fQ.5MGJxw4tzgwh (truncated)..."]
+2026-07-25T22:22:34.816+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-07-25T22:22:37.859+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /signin
+2026-07-25T22:22:37.860+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /signin
+2026-07-25T22:22:37.860+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/signin", parameters={}
+2026-07-25T22:22:37.861+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.springboot.SpringSecurities.controllers.HelloController#login(LoginRequest)
+2026-07-25T22:22:37.863+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.springboot.SpringSecurities.LoginRequest@13dfd052]
+2026-07-25T22:22:37.962+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-07-25T22:22:37.962+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-07-25T22:22:37.963+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2026-07-25T22:22:37.963+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing ["eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTc4NDk5ODM1NywiZXhwIjoxNzg1MTcxMTU3fQ.Eb-XMnBb6Xzr (truncated)..."]
+2026-07-25T22:22:37.963+05:30 DEBUG 6461 --- [SpringSecurities] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

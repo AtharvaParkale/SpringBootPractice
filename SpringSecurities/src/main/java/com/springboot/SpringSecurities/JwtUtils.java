@@ -30,10 +30,7 @@ public class JwtUtils {
 
     public String generateTokenFromUsername(UserDetails userDetails) {
         String userName = userDetails.getUsername();
-        return Jwts.builder()
-                .subject(userName)
-                .claim("roles",userDetails.getAuthorities().stream().map(GrantedAuthority::getAuthority).toList())
-                .issuedAt(new Date()).expiration(new Date(new Date().getTime() + jwtExpiration)).signWith(key()).compact();
+        return Jwts.builder().subject(userName).claim("roles", userDetails.getAuthorities().stream().map(GrantedAuthority::getAuthority).toList()).issuedAt(new Date()).expiration(new Date(new Date().getTime() + jwtExpiration)).signWith(key()).compact();
     }
 
     public boolean validateJwtToken(String jwtToken) {
@@ -55,6 +52,6 @@ public class JwtUtils {
     }
 
     public Claims getAllClaim(String jwt) {
-        return  Jwts.parser().verifyWith((SecretKey) key()).build().parseSignedClaims(jwt).getPayload();
+        return Jwts.parser().verifyWith((SecretKey) key()).build().parseSignedClaims(jwt).getPayload();
     }
 }

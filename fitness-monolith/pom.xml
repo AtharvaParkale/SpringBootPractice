@@ -114,6 +114,12 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <image>
+                        <name>docker.io/atharvaparkale/fitness-monolith:latest</name>
+                        <imagePlatform>linux/amd64</imagePlatform>
+                    </image>
+                </configuration>
             </plugin>
         </plugins>
     </build>

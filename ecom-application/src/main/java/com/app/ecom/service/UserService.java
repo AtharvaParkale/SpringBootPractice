@@ -14,19 +14,19 @@ public class UserService {
     private final UserRepository userRepository;
 
 
-    List<User> fetchAllUsers() {
+    public List<User> fetchAllUsers() {
         return userRepository.findAll();
     }
 
-    void addUser(User user) {
+    public void addUser(User user) {
         userRepository.save(user);
     }
 
-    Optional<User> fetchUser(Long id) {
+    public Optional<User> fetchUser(Long id) {
         return userRepository.findById(id);
     }
 
-    boolean updateUser(Long id, User updatedUser) {
+    public boolean updateUser(Long id, User updatedUser) {
         return userRepository.findById(id).map(existingUser -> {
             existingUser.setFirstName(updatedUser.getFirstName());
             existingUser.setLastName(updatedUser.getLastName());
